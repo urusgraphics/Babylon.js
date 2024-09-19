@@ -105,12 +105,12 @@ async function generateChangelog(nextVersion) {
                 // get the github json for each PR
                 const prsJson = await Promise.all(
                     versions[version].map(async (prNumber) => {
-                        const prJson = await runCommand(`curl -u ${githubPatToken} -s https://api.github.com/repos/BabylonJS/Babylon.js/pulls/${prNumber}`);
+                        const prJson = await runCommand(`curl -u ${githubPatToken} -s https://api.github.com/repos/urusgraphics/Babylon.js/pulls/${prNumber}`);
                         const pr = JSON.parse(prJson);
                         if (!pr.user || pr.message === "Not Found") {
                             return null;
                         }
-                        const prFilesJson = await runCommand(`curl -u ${githubPatToken} -s https://api.github.com/repos/BabylonJS/Babylon.js/pulls/${prNumber}/files?per_page=100`);
+                        const prFilesJson = await runCommand(`curl -u ${githubPatToken} -s https://api.github.com/repos/urusgraphics/Babylon.js/pulls/${prNumber}/files?per_page=100`);
                         return { prNumber, pr: JSON.parse(prJson), files: JSON.parse(prFilesJson) };
                     })
                 );
@@ -133,7 +133,7 @@ async function generateChangelog(nextVersion) {
                             let title = pr.pr.title || "Issue title not found";
                             if (matches.length) {
                                 // get the title of the issue
-                                const issueTitle = await runCommand(`curl -u ${githubPatToken} -s https://api.github.com/repos/BabylonJS/Babylon.js/issues/${matches[0][1]}`);
+                                const issueTitle = await runCommand(`curl -u ${githubPatToken} -s https://api.github.com/repos/urusgraphics/Babylon.js/issues/${matches[0][1]}`);
                                 title = JSON.parse(issueTitle).title;
                             }
 
@@ -220,7 +220,7 @@ function generateMarkdown(finalChangelog) {
                 });
                 markdown += `- ${pr.title} - ${tag ? `[_${tagNames[tag]}_] ` : ""}by [${pr.author.name}](${pr.author.url}) ([#${
                     pr.pr
-                }](https://github.com/BabylonJS/Babylon.js/pull/${pr.pr}))\n`;
+                }](https://github.com/urusgraphics/Babylon.js/pull/${pr.pr}))\n`;
             });
         });
     });
