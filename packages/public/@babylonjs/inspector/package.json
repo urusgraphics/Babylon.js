@@ -1,6 +1,6 @@
 {
     "name": "@babylonjs/inspector",
-    "version": "7.15.5",
+    "version": "7.15.6",
     "module": "dist/babylon.inspector.bundle.max.js",
     "main": "dist/babylon.inspector.bundle.max.js",
     "typings": "dist/babylon.inspector.module.d.ts",
@@ -33,10 +33,10 @@
     },
     "devDependencies": {
         "@babylonjs/core": "^7.15.2",
-        "@babylonjs/gui": "^7.15.5",
-        "@babylonjs/gui-editor": "^7.15.5",
+        "@babylonjs/gui": "^7.15.6",
+        "@babylonjs/gui-editor": "^7.15.6",
         "@babylonjs/loaders": "^7.15.2",
-        "@babylonjs/materials": "^7.15.5",
+        "@babylonjs/materials": "^7.15.6",
         "@babylonjs/serializers": "^7.15.4",
         "@lts/gui": "1.0.0",
         "react": "^17.0.2",

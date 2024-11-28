@@ -1,6 +1,6 @@
 {
     "name": "@urusgraphics/babylonjs-loaders",
-    "version": "7.15.5",
+    "version": "7.15.6",
     "main": "index.js",
     "module": "index.js",
     "types": "index.d.ts",
@@ -20,8 +20,8 @@
     "devDependencies": {
         "@dev/build-tools": "^1.0.0",
         "@lts/loaders": "^1.0.0",
-        "@urusgraphics/babylonjs-core": "^7.15.5",
-        "babylonjs-gltf2interface": "^7.15.5"
+        "@urusgraphics/babylonjs-core": "^7.15.6",
+        "babylonjs-gltf2interface": "^7.15.6"
     },
     "peerDependencies": {
         "@urusgraphics/babylonjs-core": "^7.0.0",
