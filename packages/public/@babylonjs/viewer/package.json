@@ -18,8 +18,8 @@
         "postcompile": "build-tools -c add-js-to-es6"
     },
     "dependencies": {
-        "@babylonjs/core": "^7.42.0",
         "@babylonjs/loaders": "^7.42.0",
+        "@urusgraphics/babylonjs-core": "^7.42.0",
         "babylonjs-gltf2interface": "^7.42.0",
         "babylonjs-viewer-assets": "^7.42.0",
         "deepmerge": "~4.2.2",

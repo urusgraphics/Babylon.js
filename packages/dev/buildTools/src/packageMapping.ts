@@ -66,11 +66,11 @@ export type NamespacePackageName =
     | "BABYLON.NodeRenderGraphEditor.SharedUIComponents"
     | "BABYLON.GuiEditor.SharedUIComponents";
 export type ES6PackageName =
-    | "@babylonjs/core"
+    | "@urusgraphics/babylonjs-core"
     | "@babylonjs/gui"
     | "@babylonjs/materials"
-    | "@babylonjs/loaders"
-    | "@babylonjs/serializers"
+    | "@urusgraphics/babylonjs-loaders"
+    | "@urusgraphics/babylonjs-serializers"
     | "@babylonjs/procedural-textures"
     | "@babylonjs/inspector"
     | "@babylonjs/node-editor"
@@ -214,11 +214,11 @@ const packageMapping: {
         addons: "babylonjs-addons",
     },
     es6: {
-        core: "@babylonjs/core",
+        core: "@urusgraphics/babylonjs-core",
         gui: "@babylonjs/gui",
         materials: "@babylonjs/materials",
-        loaders: "@babylonjs/loaders",
-        serializers: "@babylonjs/serializers",
+        loaders: "@urusgraphics/babylonjs-loaders",
+        serializers: "@urusgraphics/babylonjs-serializers",
         inspector: "@babylonjs/inspector",
         "node-editor": "@babylonjs/node-editor",
         "node-geometry-editor": "@babylonjs/node-geometry-editor",
