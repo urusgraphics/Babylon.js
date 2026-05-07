@@ -1,5 +1,36 @@
 # Babylon.js
 
+## Instructions for urusgraphics developers
+
+We modified packages `@babylonjs/core` to `@urusgraphics/babylonjs-core`, `@babylonjs/loaders` to `@urusgraphics/babylonjs-loaders` and `@babylonjs/serializers` to `@urusgraphics/babylonjs-serializers`,
+so we can publish them to the GitHub npm registry.
+
+To publish the packages, go to "Actions", select "Update build config", and run the workflow manually.
+
+This workflow updates `.build/config.json` and pushes to `master`.
+
+Another workflow "Publish" automatically runs after "Update build config" finishes. It updates the version number based on `.build/config.json`, builds packages and publishes them.
+
+### About version number
+
+We usually set "type" to "patch" when running the "Update build config" workflow, to avoid duplicated version number with the original babylonjs packages.
+
+However, it's always possible that upstream decides to use the version number we set. In that case we'll just live with the duplication.
+
+### After rebasing onto a new upstream version
+
+Push the previous and current upstream version tags to `urus` before triggering the first release on the new base:
+
+```bash
+git push urus <previous-upstream-version> <current-upstream-version>
+```
+
+For example, after rebasing onto 7.42.0:
+
+```bash
+git push urus 7.41.1 7.42.0
+```
+
 Getting started? Play directly with the Babylon.js API using our [playground](https://playground.babylonjs.com/). It also contains a lot of samples to learn how to use it.
 
 [![npm version](https://badge.fury.io/js/babylonjs.svg)](https://badge.fury.io/js/babylonjs)
