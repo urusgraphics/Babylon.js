@@ -1,5 +1,5 @@
 import { SerializationHelper } from "../Misc/decorators.serialization";
-import type { Nullable } from "../types";
+import type { FloatArray, Nullable } from "../types";
 import { Scene } from "../scene";
 import { Matrix, Vector3, Vector2, Vector4, Quaternion } from "../Maths/math.vector";
 import type { AbstractMesh } from "../Meshes/abstractMesh";
@@ -122,7 +122,7 @@ export class ShaderMaterial extends PushMaterial {
     private _floats: { [name: string]: number } = {};
     private _ints: { [name: string]: number } = {};
     private _uints: { [name: string]: number } = {};
-    private _floatsArrays: { [name: string]: number[] } = {};
+    private _floatsArrays: { [name: string]: FloatArray } = {};
     private _colors3: { [name: string]: Color3 } = {};
     private _colors3Arrays: { [name: string]: number[] } = {};
     private _colors4: { [name: string]: Color4 } = {};
@@ -136,9 +136,9 @@ export class ShaderMaterial extends PushMaterial {
     private _matrixArrays: { [name: string]: Float32Array | Array<number> } = {};
     private _matrices3x3: { [name: string]: Float32Array | Array<number> } = {};
     private _matrices2x2: { [name: string]: Float32Array | Array<number> } = {};
-    private _vectors2Arrays: { [name: string]: number[] } = {};
-    private _vectors3Arrays: { [name: string]: number[] } = {};
-    private _vectors4Arrays: { [name: string]: number[] } = {};
+    private _vectors2Arrays: { [name: string]: FloatArray } = {};
+    private _vectors3Arrays: { [name: string]: FloatArray } = {};
+    private _vectors4Arrays: { [name: string]: FloatArray } = {};
     private _uniformBuffers: { [name: string]: UniformBuffer } = {};
     private _textureSamplers: { [name: string]: TextureSampler } = {};
     private _storageBuffers: { [name: string]: StorageBuffer } = {};
@@ -351,7 +351,7 @@ export class ShaderMaterial extends PushMaterial {
      * @param value Define the value to give to the uniform
      * @returns the material itself allowing "fluent" like uniform updates
      */
-    public setFloats(name: string, value: number[]): ShaderMaterial {
+    public setFloats(name: string, value: FloatArray): ShaderMaterial {
         this._checkUniform(name);
         this._floatsArrays[name] = value;
 
@@ -548,7 +548,7 @@ export class ShaderMaterial extends PushMaterial {
      * @param value Define the value to give to the uniform
      * @returns the material itself allowing "fluent" like uniform updates
      */
-    public setArray2(name: string, value: number[]): ShaderMaterial {
+    public setArray2(name: string, value: FloatArray): ShaderMaterial {
         this._checkUniform(name);
         this._vectors2Arrays[name] = value;
 
@@ -561,7 +561,7 @@ export class ShaderMaterial extends PushMaterial {
      * @param value Define the value to give to the uniform
      * @returns the material itself allowing "fluent" like uniform updates
      */
-    public setArray3(name: string, value: number[]): ShaderMaterial {
+    public setArray3(name: string, value: FloatArray): ShaderMaterial {
         this._checkUniform(name);
         this._vectors3Arrays[name] = value;
 
@@ -574,7 +574,7 @@ export class ShaderMaterial extends PushMaterial {
      * @param value Define the value to give to the uniform
      * @returns the material itself allowing "fluent" like uniform updates
      */
-    public setArray4(name: string, value: number[]): ShaderMaterial {
+    public setArray4(name: string, value: FloatArray): ShaderMaterial {
         this._checkUniform(name);
         this._vectors4Arrays[name] = value;
 
