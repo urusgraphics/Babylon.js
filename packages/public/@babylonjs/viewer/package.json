@@ -1,6 +1,6 @@
 {
     "name": "@babylonjs/viewer",
-    "version": "7.42.0",
+    "version": "7.42.1",
     "main": "index.js",
     "module": "index.js",
     "types": "index.d.ts",
@@ -19,9 +19,9 @@
     },
     "dependencies": {
         "@babylonjs/loaders": "^7.42.0",
-        "@urusgraphics/babylonjs-core": "^7.42.0",
-        "babylonjs-gltf2interface": "^7.42.0",
-        "babylonjs-viewer-assets": "^7.42.0",
+        "@urusgraphics/babylonjs-core": "^7.42.1",
+        "babylonjs-gltf2interface": "^7.42.1",
+        "babylonjs-viewer-assets": "^7.42.1",
         "deepmerge": "~4.2.2",
         "handlebars": "~4.7.7",
         "pepjs": "~0.5.3",
