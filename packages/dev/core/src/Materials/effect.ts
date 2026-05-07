@@ -1274,7 +1274,7 @@ export class Effect implements IDisposable {
      * @param array array to be set.
      * @returns this effect.
      */
-    public setArray(uniformName: string, array: number[]): Effect {
+    public setArray(uniformName: string, array: FloatArray): Effect {
         this._pipelineContext!.setArray(uniformName, array);
         return this;
     }
@@ -1285,7 +1285,7 @@ export class Effect implements IDisposable {
      * @param array array to be set.
      * @returns this effect.
      */
-    public setArray2(uniformName: string, array: number[]): Effect {
+    public setArray2(uniformName: string, array: FloatArray): Effect {
         this._pipelineContext!.setArray2(uniformName, array);
         return this;
     }
@@ -1296,7 +1296,7 @@ export class Effect implements IDisposable {
      * @param array array to be set.
      * @returns this effect.
      */
-    public setArray3(uniformName: string, array: number[]): Effect {
+    public setArray3(uniformName: string, array: FloatArray): Effect {
         this._pipelineContext!.setArray3(uniformName, array);
         return this;
     }
@@ -1307,7 +1307,7 @@ export class Effect implements IDisposable {
      * @param array array to be set.
      * @returns this effect.
      */
-    public setArray4(uniformName: string, array: number[]): Effect {
+    public setArray4(uniformName: string, array: FloatArray): Effect {
         this._pipelineContext!.setArray4(uniformName, array);
         return this;
     }
