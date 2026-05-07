@@ -1,6 +1,6 @@
 {
     "name": "@urusgraphics/babylonjs-serializers",
-    "version": "7.54.3",
+    "version": "7.54.4",
     "main": "index.js",
     "module": "index.js",
     "types": "index.d.ts",
@@ -20,8 +20,8 @@
     "devDependencies": {
         "@dev/build-tools": "^1.0.0",
         "@lts/serializers": "^1.0.0",
-        "@urusgraphics/babylonjs-core": "^7.54.3",
-        "babylonjs-gltf2interface": "^7.54.3"
+        "@urusgraphics/babylonjs-core": "^7.54.4",
+        "babylonjs-gltf2interface": "^7.54.4"
     },
     "peerDependencies": {
         "@urusgraphics/babylonjs-core": "^7.0.0",
