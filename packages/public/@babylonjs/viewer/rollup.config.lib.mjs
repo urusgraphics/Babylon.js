@@ -4,7 +4,7 @@ import { nodeResolve } from "@rollup/plugin-node-resolve";
 
 const commonConfig = {
     input: "../../../tools/viewer/src/index.ts",
-    external: (id) => /^@babylonjs\/(core|loaders)(\/|$)/.test(id),
+    external: (id) => /^(@babylonjs\/(core|loaders)|@urusgraphics\/babylonjs-(core|loaders))(\/|$)/.test(id),
 };
 
 const jsConfig = {
